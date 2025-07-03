@@ -1,16 +1,45 @@
-# linked_gate
+ Product Listing App - Linked Gates Task
 
-A new Flutter project.
+This Flutter project is a simple Product Listing Screen built for the Linked Gates technical assessment. It showcases a list of products fetched from a API with features like clean UI, loading shimmer, error handling, and proper state management using Bloc pattern.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+Features
 
-A few resources to get you started if this is your first Flutter project:
+- Fetches product data from: [https://api.escuelajs.co/api/v1/products]
+- Displays:
+  - Product image
+  - Brand name (static: LAMEREI)
+  - Product name
+  - Price
+  - Static Rating (⭐ 4.8)
+  - Size options (S, M, L)
+  - Favorite icon
+  - Shimmer loading effect
+  - Error handling with retry
+  - Bloc pattern for state management
+  - Clean and responsive UI
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Getting Started
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository
+
+git clone https://github.com/Khalid-Elbakly/Product-Listing-App
+
+2. Install dependencies
+   
+flutter pub get
+
+3. Run the project
+   
+flutter run
+
+Packages Used
+- flutter_bloc =>	State management (BLoC pattern)
+- http =>	API calls
+- shimmer =>	Loading indicator
+
+Notes: 
+- The rating and sizes are hardcoded as placeholders (based on the design).
+- The API doesn't return ratings or sizes, so they are manually displayed for UI consistency.
+- Error handling covers basic network or parsing failures.
