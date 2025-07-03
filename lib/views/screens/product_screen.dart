@@ -4,6 +4,7 @@ import 'package:linked_gate/core/bloc/bloc.dart';
 import 'package:linked_gate/core/bloc/product_event.dart';
 import 'package:linked_gate/core/bloc/state.dart';
 import 'package:linked_gate/views/components/product_card.dart';
+import 'package:linked_gate/views/components/shimmer_product_card.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ProductScreen extends StatelessWidget {
@@ -20,14 +21,7 @@ class ProductScreen extends StatelessWidget {
           if (state is ProductLoading) {
             return ListView.builder(
               itemCount: 6,
-              itemBuilder: (context, index) => Shimmer.fromColors(
-                baseColor: Colors.grey.shade300,
-                highlightColor: Colors.grey.shade100,
-                child: ListTile(
-                  title: Container(height: 16.0, color: Colors.white),
-                  subtitle: Container(height: 14.0, color: Colors.white),
-                ),
-              ),
+              itemBuilder: (context, index) => ShimmerProductCard()
             );
           } else if (state is ProductLoaded) {
             return ListView.builder(
